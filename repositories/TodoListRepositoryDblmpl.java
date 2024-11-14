@@ -95,7 +95,7 @@ public class TodoListRepositoryDblmpl implements TodoListRepository {
 
     @Override
     public Boolean edit(final TodoList todoList) {
-        String sqlStatement = "UPDATE todos set todos = ? WHERE id = ?";
+        String sqlStatement = "UPDATE todos set todo = ? WHERE id = ?";
         Connection connection = database.getConnection();
         var dbId = getDbId(todoList.getId());
         if (dbId == null) {
